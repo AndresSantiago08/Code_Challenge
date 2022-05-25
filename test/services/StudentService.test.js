@@ -9,10 +9,11 @@ describe("Pruebas unitarias de la clase StudentService", () => {
         expect(allStudents.length).toBe(5);
     });
 
-    test("Prueba del método 'studentsHasCertification'", () => {
+    test("Prueba del método 'emailsStudentsWithCertification'", () => {
         const studentsRead = Reader.readJsonFile("./test/utils/TestBase.json");
-        const studentsWithCertification = StudentService.studentsHasCertification(studentsRead);
-        expect(studentsWithCertification.length).toBe(4);
+        const emailsStudents = StudentService.emailsStudentsWithCertification(studentsRead);
+        expect(emailsStudents).toContain("Todd@visualpartnership.xyz");
+        expect(emailsStudents).toContain("Howell@visualpartnership.xyz");
     });
 
     test("Prueba del método 'studentsByCredits'", () => {
