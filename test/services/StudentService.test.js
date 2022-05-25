@@ -11,14 +11,14 @@ describe("Pruebas unitarias de la clase StudentService", () => {
 
     test("Prueba del método 'emailsStudentsWithCertification'", () => {
         const studentsRead = Reader.readJsonFile("./test/utils/TestBase.json");
-        const emailsStudents = StudentService.emailsStudentsWithCertification(studentsRead);
+        const emailsStudents = StudentService.emailsStudentsWithCertification(studentsRead, true);
         expect(emailsStudents).toContain("Todd@visualpartnership.xyz");
         expect(emailsStudents).toContain("Howell@visualpartnership.xyz");
     });
 
     test("Prueba del método 'studentsByCredits'", () => {
         const studentsRead = Reader.readJsonFile("./test/utils/TestBase.json");
-        const studentsCredits = StudentService.studentsByCredits(studentsRead);
+        const studentsCredits = StudentService.studentsByCredits(studentsRead, 500);
         expect(studentsCredits.length).toBe(3);
     });
 });
