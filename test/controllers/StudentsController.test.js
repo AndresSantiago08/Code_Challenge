@@ -1,7 +1,7 @@
 const StudentsController = require("./../../lib/controllers/StudentsController");
 
 describe("Purebas unitarias de la clase 'StudentsController'", () => {
-
+    
     test("Prueba del método 'allStudents'", () => {
         const allStudents = StudentsController.allStudents();
         expect(allStudents.length).toBe(51);
@@ -27,7 +27,7 @@ describe("Purebas unitarias de la clase 'StudentsController'", () => {
                     "email": "Camacho@visualpartnership.xyz",
                     "credits": 973,
                     "enrollments": [
-                      "Visual Thinking Intermedio"
+                        "Visual Thinking Intermedio"
                     ],
                     "previousCourses": 8,
                     "haveCertification": false
@@ -42,7 +42,7 @@ describe("Purebas unitarias de la clase 'StudentsController'", () => {
                     "email": "Haynes@visualpartnership.xyz",
                     "credits": 652,
                     "enrollments": [
-                      "Visual Thinking Avanzado"
+                        "Visual Thinking Avanzado"
                     ],
                     "previousCourses": 5,
                     "haveCertification": true
